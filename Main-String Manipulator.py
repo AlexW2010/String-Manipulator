@@ -12,12 +12,10 @@ def string_reversal(): #accepts no arguements
     #Create a function that accepts a string as an argument and returns its reversed form.
     pass
 
-def character_counter(): #accepts no arguements
+def character_counter(my_string): #accepts 1 arguement my_string
     #Create a function that accepts a string as an argument and returns two values;
     #the number of vowels and the number of consonants in the string.
     
-    #get my string input
-    my_string = input_gathering()
     
     #get the vowel count
     vowel_count = count_vowels(my_string)
