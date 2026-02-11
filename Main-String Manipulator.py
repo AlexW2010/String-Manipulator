@@ -6,7 +6,19 @@ def menu(): #creates a menu allowing the user to chooce which operation to perfo
 def input_gathering():#accepts no arguements
     #prompt the user to enter a string
     #esnure the entered string is at least 5 characters long and only letters
-    pass
+    try: #get input from user
+        my_string = input("Please enter a string: ")
+
+        if len(my_string) < 5:  # check if string is less than 5 characters
+            print("Error: String is less than 5 characters long.")
+
+        if not my_string.isalpha():  # check if only letters
+            print("Error: String is not only letters.")
+
+    except Exception as err:
+        print(f"Error: An error has occurred {err}.")
+        
+    return my_string
 
 def string_reversal(): #accepts no arguements
     #Create a function that accepts a string as an argument and returns its reversed form.
@@ -16,6 +28,7 @@ def character_counter(my_string): #accepts 1 arguement my_string
     #Create a function that accepts a string as an argument and returns two values;
     #the number of vowels and the number of consonants in the string.
     
+    my_string = input_gathering()
     
     #get the vowel count
     vowel_count = count_vowels(my_string)
