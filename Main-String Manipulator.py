@@ -19,6 +19,7 @@ def input_gathering():#accepts no arguements
     except Exception as err:
         print(f"Error: An error has occurred {err}.")
         
+    return my_string
     
 
 
