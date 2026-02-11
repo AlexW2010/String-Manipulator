@@ -15,7 +15,26 @@ def string_reversal(): #accepts no arguements
 def character_counter(): #accepts no arguements
     #Create a function that accepts a string as an argument and returns two values;
     #the number of vowels and the number of consonants in the string.
-    pass
+    
+    #get my string input
+    my_string = input_gathering()
+    
+    #get the vowel count
+    vowel_count = count_vowels(my_string)
+    
+    #calculate consonants
+    consonant_count = len(my_string) - vowel_count
+    
+    #print out vowels and consonansts count
+    print(f"Vowel Count: {vowel_count}")
+    print(f"Consonants Count: {consonant_count}")
+    
+def count_vowels(my_string):# accepts 1 arguements
+    #initlize vowels
+    vowels = "aeiou"
+    
+    #add 1 to sum if vowel is in the string and return the sum
+    return sum(1 for char in my_string if char in vowels)
 
 def character_replacer(): #character replacer accepts no arguements
     #Create a function that replaces a specified character in the string with another character.
