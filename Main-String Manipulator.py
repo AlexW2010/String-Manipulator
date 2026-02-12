@@ -26,13 +26,13 @@ def input_gathering():  # accepts no arguements
 
 
 def string_reversal(my_string):  # accepts 1 arguement
-    # Create a function that accepts a string as an argument and returns its reversed form.
+    # creates a function that accepts a string as an argument and returns its reversed form.
     
     return my_string[::-1]
 
 
 def character_counter(my_string):  # accepts 1 arguement my_string
-    # Create a function that accepts a string as an argument and returns two values;
+    #create a function that accepts a string as an argument and returns two values;
     # the number of vowels and the number of consonants in the string.
     
     # get the vowel count
@@ -51,19 +51,19 @@ def count_vowels(my_string):  # accepts 1 arguement
     # add 1 to sum if vowel is in the string and return the sum
     return sum(1 for char in my_string.lower() if char in vowels)
 
+#put this in menu
+user_string = input_gathering()
 
-    user_string = input_gathering()
+# reverse the string
+reversed_string = string_reversal(user_string)
 
-    # reverse the string
-    reversed_string = string_reversal(user_string)
+# count vowels and consonants
+vowels, consonants = character_counter(user_string)
 
-    # count vowels and consonants
-    vowels, consonants = character_counter(user_string)
-
-    # print results
-    print(f"Reversed String: {reversed_string}")
-    print(f"Vowel Count: {vowels}")
-    print(f"Consonants Count: {consonants}")
+# print results
+print(f"Reversed String: {reversed_string}")
+print(f"Vowel Count: {vowels}")
+print(f"Consonants Count: {consonants}")
 
 def character_replacer(): #character replacer accepts no arguements
     #Create a function that replaces a specified character in the string with another character.
