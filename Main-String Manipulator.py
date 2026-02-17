@@ -8,19 +8,32 @@ def input_gathering():#accepts no arguements
     #esnure the entered string is at least 5 characters long and only letters
     pass
 
-def string_reversal(): #accepts no arguements
+def string_reversal(user_string): #accepts no arguements
     #Create a function that accepts a string as an argument and returns its reversed form.
-    pass
+    reversed_string = ""
+    
+    for character in user_string:
+        reversed_string = character + reversed_string
+    
+    return reversed_string
 
 def character_counter(): #accepts no arguements
     #Create a function that accepts a string as an argument and returns two values;
     #the number of vowels and the number of consonants in the string.
     pass
 
-def character_replacer(): #character replacer accepts no arguements
+def character_replacer(user_string, character_to_replace, replacement_char): #character replacer accepts no arguements
     #Create a function that replaces a specified character in the string with another character.
     #Allow the user to choose the character to replace. Return the new string.
-    pass
+    new_string = ""
+    
+    for character in user_string:
+        if character == character_to_replace:
+            new_string += replacement_character
+        else:
+            new_string += character
+    
+    return new_string
 
 def string_anyalysis(): #string_anyalysis accepts no arguements
     #Create a function that accepts a string as an argument and analyzes the string and returns:
